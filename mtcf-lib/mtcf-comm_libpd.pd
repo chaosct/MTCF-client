@@ -1,0 +1,34 @@
+#N canvas 480 132 605 350 10;
+#X obj -51 -238 r basicTangibleTabletop1234messageBus;
+#X obj -51 -202 s from_pd_mtcf;
+#X obj -50 -176 r from_mtcf;
+#X obj -50 -142 s basicTangibleTabletop1235messageBus;
+#X obj 228 -210 route /init;
+#X obj 228 -184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 228 -237 r basicTangibleTabletop1235messageBus;
+#X obj 344 -180 s initparameters;
+#X obj 268 -181 delay 1000;
+#X obj 322 -147 print initialized;
+#X obj 2 -90 loadbang;
+#X obj 68 -92 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 2 -49 print WARNING!!----------------------------------->if
+you are using OSC replace the mtcf-comm for the one suplied into OSC_modules
+folder;
+#X text -34 13 MTCF mobile PD Client;
+#X text -36 28 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
+;
+#X text -35 45 This software (client) is released under the MIT licence
+;
+#X obj 382 -83 mtcf-transform_update;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 4 0;
+#X connect 8 0 7 0;
+#X connect 8 0 9 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X coords 0 0 1 1 200 140 0;

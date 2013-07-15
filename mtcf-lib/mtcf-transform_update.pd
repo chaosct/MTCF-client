@@ -1,4 +1,4 @@
-#N canvas 66 115 441 199 10;
+#N canvas 64 124 441 199 10;
 #X obj 67 84 s update_transform;
 #X obj 67 16 loadbang;
 #X obj 124 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -10,6 +10,8 @@
 ;
 #X text -13 165 This software (client) is released under the MIT licence
 ;
+#X obj 154 27 r transform_update_interval;
 #X connect 1 0 3 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
+#X connect 8 0 3 1;

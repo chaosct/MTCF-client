@@ -1,0 +1,4 @@
+#N canvas 316 463 397 138 10;
+#X obj 46 27 inlet;
+#X obj 46 56 s transform_update_interval;
+#X connect 0 0 1 0;

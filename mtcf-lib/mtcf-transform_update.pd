@@ -1,0 +1,15 @@
+#N canvas 66 115 441 199 10;
+#X obj 67 84 s update_transform;
+#X obj 67 16 loadbang;
+#X obj 124 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 67 57 metro 100;
+#X text 5 99 Polygon transformation update interval;
+#X text -12 133 MTCF mobile PD Client;
+#X text -14 148 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
+;
+#X text -13 165 This software (client) is released under the MIT licence
+;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;

@@ -1,4 +1,4 @@
-#N canvas 837 258 838 621 10;
+#N canvas 300 347 838 621 10;
 #X obj 273 36 loadbang;
 #X msg 273 57 \; pd dsp 1;
 #X text 546 14 Musical Tabletop Coding Framework PD Client;
@@ -24,7 +24,7 @@
 #X obj 12 278 mtcf-translate 0.1 0.1;
 #X obj 12 474 nop;
 #X obj 166 472 nop;
-#X text 44 169;
+#X text 44 169 comment;
 #N canvas 993 261 728 253 shapes 0;
 #X obj 48 179 mtcf-polygon;
 #X obj 77 92 mtcf-init;
@@ -410,7 +410,8 @@
 #X connect 24 0 21 0;
 #X connect 25 0 24 0;
 #X restore 397 244 pd colors;
-#N canvas 1168 63 601 326 transform 0;
+#X msg 14 247 transform;
+#N canvas 1168 63 601 326 transformations 0;
 #N canvas 1061 393 450 436 label 0;
 #X obj 55 351 mtcf-text;
 #X obj 91 71 mtcf-init;
@@ -586,8 +587,7 @@
 #X connect 15 0 10 0;
 #X connect 16 0 17 1;
 #X connect 17 0 13 0;
-#X restore 398 282 pd transform;
-#X msg 14 247 transform;
+#X restore 398 282 pd transformations;
 #X connect 0 0 1 0;
 #X connect 6 0 7 0;
 #X connect 8 0 5 0;
@@ -596,4 +596,4 @@
 #X connect 18 0 19 0;
 #X connect 19 0 15 0;
 #X connect 20 0 15 0;
-#X connect 25 0 18 0;
+#X connect 24 0 18 0;

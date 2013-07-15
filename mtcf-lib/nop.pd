@@ -1,0 +1,9 @@
+#N canvas 66 82 450 300 10;
+#X obj 152 31 inlet;
+#X obj 152 87 outlet;
+#X text 1 131 MTCF mobile PD Client;
+#X text -1 146 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
+;
+#X text 0 163 This software (client) is released under the MIT licence
+;
+#X connect 0 0 1 0;

@@ -1,0 +1,12 @@
+#N canvas 1151 569 450 300 10;
+#X obj 89 88 inlet;
+#X msg 89 119 /mtcf inverty \$1;
+#X obj 89 151 mtcf-send;
+#X text -15 194 MTCF mobile PD Client;
+#X text -17 209 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
+;
+#X text -16 226 This software (client) is released under the MIT licence
+;
+#X text -15 46 inlet 1 or 0 (invert y axis or don't);
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

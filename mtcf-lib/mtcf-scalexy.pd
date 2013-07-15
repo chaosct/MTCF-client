@@ -1,28 +1,34 @@
-#N canvas 946 358 359 380 10;
+#N canvas 942 156 359 509 10;
 #X obj -37 -3 inlet;
-#X obj -10 240 outlet;
+#X obj -10 360 outlet;
 #X obj 122 -1 inlet;
-#X obj -37 24 route transform;
-#X obj -10 211 prepend transform;
 #X obj -37 76 t b a;
-#X obj -10 109 prepend set transform;
 #X text 160 -2 XY;
-#X obj 122 173 prepend S;
-#X obj 122 52 float \$1;
-#X text -56 266 MTCF mobile PD Client;
-#X text -58 281 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
+#X obj 122 140 float \$1;
+#X text -56 398 MTCF mobile PD Client;
+#X text -58 413 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
 ;
-#X text -57 298 This software (client) is released under the MIT licence
+#X text -57 430 This software (client) is released under the MIT licence
 ;
 #X text -59 -51 Scales a graphic object. See [mtcf-transformations-help]
 ;
 #X text -58 -35 Inlets: Transformation Chain \, XYfactor scale;
-#X connect 0 0 3 0;
-#X connect 2 0 9 0;
+#X obj -10 331 list prepend transform;
+#X obj -37 24 route transform bang;
+#X obj 122 173 list prepend S;
+#X msg 119 254 transform;
+#X obj 21 62 t b b;
+#X obj -45 207 list prepend transform;
+#X connect 0 0 12 0;
+#X connect 2 0 5 0;
 #X connect 3 0 5 0;
-#X connect 4 0 1 0;
-#X connect 5 0 9 0;
-#X connect 5 1 6 0;
-#X connect 6 0 4 0;
-#X connect 8 0 4 0;
-#X connect 9 0 8 0;
+#X connect 3 1 16 0;
+#X connect 5 0 13 0;
+#X connect 11 0 1 0;
+#X connect 12 0 3 0;
+#X connect 12 1 15 0;
+#X connect 13 0 11 0;
+#X connect 14 0 11 1;
+#X connect 15 0 5 0;
+#X connect 15 1 14 0;
+#X connect 16 0 11 1;

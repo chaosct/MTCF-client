@@ -1,4 +1,4 @@
-#N canvas 221 365 343 494 10;
+#N canvas 219 402 343 494 10;
 #X text 23 435 Musical Tabletop Coding Framework PD Client;
 #X text 22 450 (C) Carles F. Julia carles.fernandez@upf.edu;
 #X text 23 465 This software is released under the MIT license;
@@ -7,10 +7,8 @@
 -1 -1;
 #X obj 243 200 mtcf-reset;
 #X obj 28 190 mybird;
-#X msg 244 256 1;
-#X obj 244 230 loadbang;
-#X obj 244 279 metro 100;
-#X msg 274 256 25;
+#X msg 255 342 1;
+#X obj 255 316 loadbang;
 #X obj 28 210 mybird;
 #X obj 71 190 mybird;
 #X obj 71 210 mybird;
@@ -26,11 +24,12 @@
 #X obj 114 251 mybird;
 #X obj 157 230 mybird;
 #X obj 157 251 mybird;
-#X msg 304 257 50;
-#X obj 243 307 s birdupdate;
+#X obj 254 393 s birdupdate;
+#X obj 27 396 mtcf-transform-update-interval;
+#X msg 28 367 30;
+#X obj 254 365 metro 30;
 #X connect 4 0 5 0;
-#X connect 7 0 9 0;
+#X connect 7 0 27 0;
 #X connect 8 0 7 0;
-#X connect 9 0 27 0;
-#X connect 10 0 9 1;
-#X connect 26 0 9 1;
+#X connect 26 0 25 0;
+#X connect 27 0 24 0;

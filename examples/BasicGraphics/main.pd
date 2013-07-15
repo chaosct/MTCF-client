@@ -1,4 +1,4 @@
-#N canvas 300 347 838 621 10;
+#N canvas 298 356 838 621 10;
 #X obj 273 36 loadbang;
 #X msg 273 57 \; pd dsp 1;
 #X text 546 14 Musical Tabletop Coding Framework PD Client;
@@ -380,7 +380,7 @@
 #X obj 713 118 loadbang;
 #X obj 772 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 713 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 713 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 713 145 metro 1000;
 #X obj 131 49 print C;
@@ -588,6 +588,8 @@
 #X connect 16 0 17 1;
 #X connect 17 0 13 0;
 #X restore 398 282 pd transformations;
+#X obj 381 128 mtcf-transform-update-interval;
+#X msg 381 99 30;
 #X connect 0 0 1 0;
 #X connect 6 0 7 0;
 #X connect 8 0 5 0;
@@ -597,3 +599,4 @@
 #X connect 19 0 15 0;
 #X connect 20 0 15 0;
 #X connect 24 0 18 0;
+#X connect 27 0 26 0;

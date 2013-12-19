@@ -1,13 +1,4 @@
-#N canvas 1137 398 682 313 10;
-#X obj -3 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj -3 19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 262 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 262 267 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 25 2 MTCF Connection Manager:;
+#N canvas 597 407 682 313 10;
 #X obj 42 50 mtcf-comm;
 #X obj 140 218 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -233,13 +224,9 @@
 #X obj 494 70 mtcf-scale 0.5 0.5;
 #X obj 531 96 mtcf-rotate 30;
 #X obj 494 45 mtcf-translate 0.3 0;
-#X connect 1 0 0 0;
-#X connect 2 0 3 0;
-#X connect 2 0 1 0;
-#X connect 3 0 0 0;
-#X connect 6 0 10 0;
-#X connect 13 0 12 0;
-#X connect 19 0 22 0;
-#X connect 20 0 21 0;
-#X connect 21 0 12 1;
-#X connect 22 0 20 0;
+#X connect 1 0 5 0;
+#X connect 8 0 7 0;
+#X connect 14 0 17 0;
+#X connect 15 0 16 0;
+#X connect 16 0 7 1;
+#X connect 17 0 15 0;

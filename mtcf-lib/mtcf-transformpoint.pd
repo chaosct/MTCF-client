@@ -1,6 +1,6 @@
-#N canvas 354 40 595 626 10;
+#N canvas 0 44 702 978 10;
 #X obj 6 -2 inlet;
-#X obj 6 145 unpack f f f f f f f f f f f f f f f f;
+#X obj 33 148 unpack f f f f f f f f f f f f f f f f;
 #X obj 71 258 *;
 #X obj 116 258 *;
 #X obj 173 258 *;
@@ -9,9 +9,9 @@
 #X obj 139 302 +;
 #X obj 90 351 +;
 #X obj 127 479 outlet;
-#X obj 335 142 float \$1;
-#X obj 400 142 float \$2;
-#X obj 464 141 float \$3;
+#X obj 335 126 float \$1;
+#X obj 400 126 float \$2;
+#X obj 464 126 float \$3;
 #X obj 251 257 *;
 #X obj 296 257 *;
 #X obj 353 257 *;
@@ -33,7 +33,6 @@
 #X obj 418 23 t b f;
 #X obj 482 -1 inlet;
 #X obj 482 23 t b f;
-#X obj 158 63 bang;
 #X obj 6 33 mtcf-matrix;
 #X text 12 511 MTCF mobile PD Client;
 #X text 10 526 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
@@ -43,7 +42,9 @@
 #X text 7 -62 Multiplies a point by a matrix.;
 #X text 6 -47 Inlets: Matrix (16values list) \, X \, Y;
 #X text 6 -31 Outlets: Xresult \, Yresult;
-#X connect 0 0 35 0;
+#X obj 6 55 t b a;
+#X obj 335 148 t f f f;
+#X connect 0 0 34 0;
 #X connect 1 0 2 1;
 #X connect 1 1 13 1;
 #X connect 1 2 20 1;
@@ -60,12 +61,10 @@
 #X connect 3 0 7 0;
 #X connect 4 0 7 1;
 #X connect 5 0 9 0;
-#X connect 6 0 35 0;
+#X connect 6 0 34 0;
 #X connect 7 0 8 1;
 #X connect 8 0 5 0;
-#X connect 10 0 2 0;
-#X connect 10 0 13 0;
-#X connect 10 0 20 0;
+#X connect 10 0 42 0;
 #X connect 11 0 3 0;
 #X connect 11 0 14 0;
 #X connect 11 0 21 0;
@@ -96,6 +95,9 @@
 #X connect 32 0 33 0;
 #X connect 33 0 27 0;
 #X connect 33 1 12 1;
-#X connect 34 0 27 0;
-#X connect 35 0 1 0;
-#X connect 35 0 34 0;
+#X connect 34 0 41 0;
+#X connect 41 0 27 0;
+#X connect 41 1 1 0;
+#X connect 42 0 2 0;
+#X connect 42 1 13 0;
+#X connect 42 2 20 0;

@@ -1,4 +1,4 @@
-#N canvas 0 24 1280 743 10;
+#N canvas 0 44 702 978 10;
 #X obj 551 132 f \$1;
 #X text 516 132 f_id;
 #X obj 24 592 s basicTangibleTabletop1234messageBus;
@@ -111,8 +111,8 @@
 -1 -1;
 #X obj 518 608 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 562 333 inlet;
-#X obj 562 360 route slider param;
+#X obj 599 302 inlet;
+#X obj 599 323 route slider param;
 #N canvas 535 376 303 297 onoff 0;
 #X obj 58 28 inlet;
 #X obj 52 233 outlet;
@@ -128,7 +128,7 @@
 #X connect 3 1 4 0;
 #X connect 4 0 1 0;
 #X connect 5 0 1 0;
-#X restore 562 401 pd onoff;
+#X restore 775 379 pd onoff;
 #N canvas 535 376 303 297 onoff 0;
 #X obj 58 28 inlet;
 #X obj 52 233 outlet;
@@ -144,8 +144,8 @@
 #X connect 3 1 4 0;
 #X connect 4 0 1 0;
 #X connect 5 0 1 0;
-#X restore 621 402 pd onoff;
-#X obj 571 587 s basicTangibleTabletop1234messageBus;
+#X restore 832 379 pd onoff;
+#X obj 676 601 s basicTangibleTabletop1234messageBus;
 #X obj 259 107 unpack f f;
 #X obj 333 242 outlet;
 #X obj 24 43 route /object /object/on /object/off /object/angle_report
@@ -171,14 +171,14 @@
 #X obj 74 502 v ObjectProperty2\$1;
 #X obj 24 543 pack f f f;
 #X obj 24 501 t b b b;
-#X obj 619 446 v ObjectProperty1\$1;
-#X obj 561 467 v ObjectProperty2\$1;
-#X obj 563 427 t b f;
-#X obj 567 488 t b f;
-#X obj 569 514 f \$1;
-#X obj 570 541 pack f f f;
-#X obj 620 421 t b f;
-#X obj 617 487 t b f;
+#X obj 832 424 v ObjectProperty1\$1;
+#X obj 775 445 v ObjectProperty2\$1;
+#X obj 775 401 t b f;
+#X obj 775 466 t b f;
+#X obj 775 492 f \$1;
+#X obj 775 519 pack f f f;
+#X obj 832 401 t b f;
+#X obj 832 465 t b f;
 #X text 500 36 Musical Tabletop Coding Framework PD Client;
 #X text 499 51 (C) Carles F. Julia carles.fernandez@upf.edu;
 #X text 500 66 This software is released under the MIT license;
@@ -187,10 +187,18 @@
 #X obj 868 122 f \$1;
 #X obj 868 97 t b f;
 #X obj 868 148 pack f f;
-#X msg 570 566 /objects \$1 config \$2 \$3;
+#X msg 775 546 /objects \$1 config \$2 \$3;
 #X msg 286 565 /objects \$1 config 0 0 1;
 #X msg 24 566 /objects \$1 config \$2 \$3;
 #X obj 867 259 s basicTangibleTabletop1234messageBus;
+#X obj 651 381 route color;
+#X obj 530 384 route color;
+#X obj 651 497 list prepend angle;
+#X obj 572 522 list prepend \$1;
+#X msg 572 546 /objects \$1 color \$2 \$3 \$4 \$5 \$6;
+#X obj 530 475 pack f f f 255;
+#X obj 651 475 pack f f f 255;
+#X obj 530 497 list prepend slider;
 #X connect 3 0 56 0;
 #X connect 5 0 57 0;
 #X connect 6 0 35 0;
@@ -227,7 +235,9 @@
 #X connect 42 0 43 0;
 #X connect 44 0 45 0;
 #X connect 45 0 46 0;
+#X connect 45 0 79 0;
 #X connect 45 1 47 0;
+#X connect 45 1 78 0;
 #X connect 46 0 60 0;
 #X connect 47 0 64 0;
 #X connect 49 1 39 0;
@@ -265,3 +275,11 @@
 #X connect 74 0 48 0;
 #X connect 75 0 13 0;
 #X connect 76 0 2 0;
+#X connect 78 0 84 0;
+#X connect 79 0 83 0;
+#X connect 80 0 81 0;
+#X connect 81 0 82 0;
+#X connect 82 0 48 0;
+#X connect 83 0 85 0;
+#X connect 84 0 80 0;
+#X connect 85 0 81 0;

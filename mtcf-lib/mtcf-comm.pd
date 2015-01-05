@@ -1,4 +1,4 @@
-#N canvas 936 0 957 939 10;
+#N canvas 0 44 702 978 10;
 #X obj 110 123 bng 15 250 50 0 empty \$0_rconnect empty 17 7 0 10 -262144
 -1 -1;
 #X obj 105 215 tgl 15 0 \$0_sreuseip \$0_rreuseip empty 17 7 0 10 -262144
@@ -38,9 +38,8 @@
 #X connect 6 0 8 0;
 #X connect 8 1 3 0;
 #X restore -42 -352 pd debug;
-#N canvas 609 238 623 274 dumpOSC 0;
+#N canvas 0 44 702 978 dumpOSC 0;
 #X obj 101 11 outlet;
-#X obj 101 -35 mrpeach/udpreceive 1235;
 #X obj 101 -15 mrpeach/unpackOSC;
 #X obj 236 151 outlet;
 #X obj 101 -83 inlet;
@@ -51,7 +50,7 @@
 #X obj 426 86 pack f f f f;
 #X msg 423 119 \$1.\$2.\$3.\$4;
 #X obj 426 21 spigot;
-#X obj 458 -1 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 458 -1 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 356 81 0;
 #X text 316 15 linux;
@@ -59,26 +58,28 @@
 #X msg 330 119 \$1.\$2.\$3.\$4;
 #X msg 494 -23 1;
 #X obj 511 -55 loadbang;
-#X connect 1 0 2 0;
-#X connect 1 1 7 0;
-#X connect 2 0 0 0;
-#X connect 4 0 5 0;
-#X connect 6 0 13 0;
-#X connect 6 0 16 0;
-#X connect 7 0 11 0;
-#X connect 7 1 6 0;
+#X obj 101 -35 mrpeach/udpreceive 1235;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 18 0;
+#X connect 5 0 12 0;
+#X connect 5 0 15 0;
+#X connect 6 0 10 0;
+#X connect 6 1 5 0;
+#X connect 7 0 8 0;
+#X connect 7 1 8 1;
+#X connect 7 2 8 2;
+#X connect 7 3 8 3;
 #X connect 8 0 9 0;
-#X connect 8 1 9 1;
-#X connect 8 2 9 2;
-#X connect 8 3 9 3;
-#X connect 9 0 10 0;
-#X connect 10 0 3 0;
-#X connect 11 0 8 0;
-#X connect 12 0 11 1;
-#X connect 13 0 12 0;
-#X connect 16 0 3 0;
-#X connect 17 0 12 0;
-#X connect 18 0 17 0;
+#X connect 9 0 2 0;
+#X connect 10 0 7 0;
+#X connect 11 0 10 1;
+#X connect 12 0 11 0;
+#X connect 15 0 2 0;
+#X connect 16 0 11 0;
+#X connect 17 0 16 0;
+#X connect 18 0 1 0;
+#X connect 18 1 6 0;
 #X restore 359 -109 pd dumpOSC;
 #X msg 359 -40 bang;
 #X obj 359 9 t b b;
@@ -153,10 +154,10 @@
 #X obj 458 -140 s \$0_intport;
 #X obj 372 -139 s \$0_ctrport;
 #X obj 359 325 s \$0_intport;
-#X obj 187 169 nbx 5 14 -1e+037 1e+037 0 0 empty \$0_ctrport empty
-0 -8 0 10 -262144 -1 -1 1235 256;
-#X obj 197 190 nbx 5 14 -1e+037 1e+037 0 0 empty \$0_intport empty
-0 -8 0 10 -262144 -1 -1 1234 256;
+#X obj 187 169 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_ctrport empty 0
+-8 0 10 -262144 -1 -1 1235 256;
+#X obj 197 190 nbx 5 14 -1e+37 1e+37 0 0 empty \$0_intport empty 0
+-8 0 10 -262144 -1 -1 1234 256;
 #X obj 359 -63 route /connect;
 #X obj 327 609 mtcf-reset;
 #X obj 707 158 loadbang;
@@ -233,6 +234,7 @@
 #X obj -32 392 + 1;
 #X msg -37 357 0;
 #X obj 739 -18 mtcf-transform_update;
+#X text 714 -253 <-I think we don't need this;
 #X connect 0 0 57 0;
 #X connect 2 0 47 0;
 #X connect 3 0 4 0;
@@ -298,7 +300,6 @@
 #X connect 70 0 71 0;
 #X connect 75 0 76 0;
 #X connect 77 0 75 0;
-#X connect 80 0 81 0;
 #X connect 81 0 82 0;
 #X connect 82 0 84 0;
 #X connect 84 0 83 0;

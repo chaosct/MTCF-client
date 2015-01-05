@@ -1,19 +1,25 @@
-#N canvas 665 597 414 300 10;
-#X obj 103 59 inlet;
-#X obj 103 94 route color;
-#X obj 103 157 list prepend /mtcf;
-#X obj 103 188 route list;
-#X obj 103 123 list prepend background;
-#X obj 103 221 mtcf-send;
-#X text 34 245 MTCF mobile PD Client;
-#X text 32 260 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
+#N canvas 415 376 402 293 10;
+#X obj 103 36 inlet;
+#X obj 103 162 list prepend /mtcf;
+#X obj 103 139 list prepend background;
+#X obj 103 208 mtcf-send;
+#X text 34 232 MTCF mobile PD Client;
+#X text 32 247 (C) Daniel Gallardo Grassot daniel.gallardo@upf.edu
 ;
-#X text 33 277 This software (client) is released under the MIT licence
+#X text 33 264 This software (client) is released under the MIT licence
 ;
-#X text 41 20 Changes the background MTCF color. It receives a MTCF
-Color message (see mtcf-color);
-#X connect 0 0 1 0;
-#X connect 1 0 4 0;
-#X connect 2 0 3 0;
-#X connect 3 0 5 0;
-#X connect 4 0 2 0;
+#X text 35 17 Receives any kind of graphic modifiers;
+#X obj 103 185 list trim;
+#X text 183 82 <-Ignore alpha;
+#X obj 103 59 route color;
+#X obj 103 82 list split 3;
+#X obj 103 105 list prepend color;
+#X text 59 1 Changes MTCF background;
+#X connect 0 0 10 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 0;
+#X connect 8 0 3 0;
+#X connect 10 0 11 0;
+#X connect 10 1 2 0;
+#X connect 11 0 12 0;
+#X connect 12 0 2 0;
